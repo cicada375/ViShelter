@@ -1,17 +1,16 @@
-package com.example.myapplication;
+//може бути таке, що через те що в мене тут додаток з картою зроблено спочатку, і не вийде реалізувати меню на карті, але в любому випадку цей код пригодиться
 
+
+package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
-
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.location.LocationRequest;
 import android.os.Bundle;
-
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,18 +21,15 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.example.myapplication.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    FusedLocationProviderClient fusedLocationProviderClient;
+    //FusedLocationProviderClient fusedLocationProviderClient;
     private final int ACCESS_LOCATION_REQUEST_CODE = 10001;
-    LocationRequest locationRequest;
+    //LocationRequest locationRequest;
     GoogleMap googleMap;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         com.example.myapplication.databinding.ActivityMapsBinding binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -85,7 +81,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 enableUserLocation();
             }
             else{
-                //сказати що дозвіл не надано
+                //сказати що дозвіл було не надано
             }
         }
     }

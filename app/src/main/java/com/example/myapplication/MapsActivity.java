@@ -23,7 +23,6 @@ import com.example.myapplication.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-
     //FusedLocationProviderClient fusedLocationProviderClient;
     private final int ACCESS_LOCATION_REQUEST_CODE = 10001;
     //LocationRequest locationRequest;
